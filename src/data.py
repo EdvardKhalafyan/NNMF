@@ -96,5 +96,5 @@ def load_utk():
     
     resized_images = np.array(resized_images_list)
     np_image_array = resized_images.reshape(resized_images.shape[0], -1)
-    np_image_array = (np_image_array / np_image_array.max()).astype(np.float64)
+    np_image_array = (np_image_array / 255).astype(np.float64)
     return np_image_array

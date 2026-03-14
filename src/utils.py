@@ -1,5 +1,9 @@
+import config
 import numpy as np
 from copy import deepcopy
+
+np.random.seed(config.SEED)
+np.random.default_rng(config.SEED)
 
 def apply_symmetric_noise(arr, prob=0.07):
     noisy_arr = deepcopy(arr)
